@@ -5,6 +5,14 @@
 % Base de Conhecimento com informacao genealogica.
 
 %--------------------------------- - - - - - - - - - -  -  -  -  -   -
+% Extensao do predicado filho: Masculino,Feminino -> {V,F}
+
+masculino(joao).
+masculino(jose).
+feminino(maria).
+feminino(joana).
+
+%--------------------------------- - - - - - - - - - -  -  -  -  -   -
 % Extensao do predicado filho: Filho,Pai -> {V,F}
 
 filho( joao,jose ).
