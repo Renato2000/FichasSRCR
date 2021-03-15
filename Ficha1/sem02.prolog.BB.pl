@@ -29,21 +29,21 @@ pai( P,F ) :- filho( F,P ).
 %--------------------------------- - - - - - - - - - -  -  -  -  -   -
 % Extensao do predicado avo: Avo,Neto -> {V,F}
 
-avo ( A,N ) :- filho( P,A ), filho( N,P ).
+avo( A,N ) :- filho( P,A ), filho( N,P ).
 
 %--------------------------------- - - - - - - - - - -  -  -  -  -   -
 % Extensao do predicado bisavo: Bisavo,Bisneto -> {V,F}
 
-bisavo ( A,D ) :- descendente( D,A,3 ).
+bisavo( A,D ) :- descendente( D,A,3 ).
 
 %--------------------------------- - - - - - - - - - -  -  -  -  -   -
 % Extensao do predicado descendente: Descendente,Ascendente -> {V,F}
 
-descendente ( D,A ) :- filho ( D,A ).
-descendente ( D,A ) :- filho ( D,X ), descendente( X,A ).
+descendente( D,A ) :- filho( D,A ).
+descendente( D,A ) :- filho( D,X ), descendente( X,A ).
 
 %--------------------------------- - - - - - - - - - -  -  -  -  -   -
 % Extensao do predicado descendente: Descendente,Ascendente,Grau -> {V,F}
 
-descendente ( D,A,1 ) :- filho ( D,A ).
-descendente ( D,A,G ) :- filho ( D,X ), descendente( X,A,N ), G is N+1.
+descendente( D,A,1 ) :- filho( D,A ).
+descendente( D,A,G ) :- filho( D,X ), descendente( X,A,N ), G is N+1.

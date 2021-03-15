@@ -89,3 +89,7 @@ prefixo( P,L ) :- concatenar( P,_,L ).
 
 sublist( Sub,List ) :- sufixo( Sufix,List ), prefixo( Sub,Prefix ).
 
+
+
+solucoes(X,Y,Z) :- findall(X, Y, Z).
+
