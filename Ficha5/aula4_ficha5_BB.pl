@@ -92,16 +92,19 @@ evolucao( Termo ) :-
     insercao( Termo ),
     teste( Lista ).
 
-insercao(Termo) :- assert(Term).
-insercao(Termo) :- retract(Term),!,fail.
+insercao(Termo) :- assert(Termo).
+insercao(Termo) :- retract(Termo),!,fail.
+
+teste( [] ).
+teste( [R,LR] ) :- R, teste(LR).
 
 %--------------------------------- - - - - - - - - - -  -  -  -  -   -
 % Extensão do predicado que permite a involucao do conhecimento
 
 involucao( Termo ) :-
-    findall( Invariante,+Termo::Invariante,Lista ),
+    findall( Invariante,-Termo::Invariante,Lista ),
     remocao( Termo ),
     teste( Lista ).
 
-remocao(Termo) :- retract(Term).
-remocao(Termo) :- assert(Term),!,fail.
+remocao(Termo) :- retract(Termo).
+remocao(Termo) :- assert(Termo),!,fail.
