@@ -31,8 +31,8 @@ excecao( jogo( 4,dd,Ajudas ) ) :- Ajudas >= 250, Ajudas =< 750.
 %exemplo de conhecimento intedito
 jogo( 5,ee,xpto765 ).
 excecao( jogo( Jogo,Arbitro,Ajudas ) ) :-
-    jogo( Jogo,Arbitro,nulo ).
-nulo(nulo).
+    jogo( Jogo,Arbitro,xpto765 ).
+nulo(xpto765).
 +jogo( Jogo,Arbitro,Ajudas ) :: (solucoes( Ajudas,( jogo( Jogo,Arbitro,Ajudas ), nao( nulo( Jogo,Arbitro,Ajudas ) ) ),S ),
     comprimento( S,N ),
     N==0).
