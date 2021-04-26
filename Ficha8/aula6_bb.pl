@@ -130,8 +130,6 @@ demo( Questao,desconhecido ) :-
     nao( Questao ),
     nao( -Questao ).
 
-
-
 %--------------------------------- - - - - - - - - - -  -  -  -  -   -
 % Extensao do meta-predicado nao: Questao -> {V,F}
 

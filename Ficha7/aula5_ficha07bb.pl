@@ -33,7 +33,7 @@ jogo( 5,ee,xpto765 ).
 excecao( jogo( Jogo,Arbitro,Ajudas ) ) :-
     jogo( Jogo,Arbitro,xpto765 ).
 nulo(xpto765).
-+jogo( Jogo,Arbitro,Ajudas ) :: (solucoes( Ajudas,( jogo( Jogo,Arbitro,Ajudas ), nao( nulo( Jogo,Arbitro,Ajudas ) ) ),S ),
++jogo( Jogo,Arbitro,Ajudas ) :: (solucoes( Ajudas,( jogo( 5,ee,Ajudas ), nao( nulo( 5,ee,Ajudas ) ) ),S ),
     comprimento( S,N ),
     N==0).
 
