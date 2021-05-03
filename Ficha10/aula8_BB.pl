@@ -58,7 +58,7 @@ melhor(S, Custo) :- findall((S,C), (resolvedf(S), length(S,C), L), minimo(L,(S,C
 
 minimo([(P,X)], (P,X)).
 minimo([(P,X)|L], (Py,Y)) :- minimo(L, (Py,Y)), Y < X.
-minimo([(P,X)|L], (Px,X)) :- minimo(L, (Py,Y)), Y < X.
+minimo([(P,X)|L], (Px,X)) :- minimo(L, (Px,X)), Y >= X.
 
 % ------------------------------------------------------------------------------------
 
@@ -87,6 +87,7 @@ actualizar([(Move, Estado)|Ls], Vs, Historico, [(Estado, [Move|Vs])]-Ys) :-
 
 % ------------------------------------------------------------------------------------
 
+/*
 resolve_bfs(NodeS, NodeD, Sol) :- 
     breadthfirst([[NodeS]], NodeD, Sol).
 
@@ -94,6 +95,7 @@ breadthfirst([Path,Paths], NodeD, Sol) :-
     extend(Path, NewPaths),
     concat(Paths,NewPaths, Paths1),
     breadthfirst()
+*/
 
 
 % ------------------------------------------------------------------------------------
